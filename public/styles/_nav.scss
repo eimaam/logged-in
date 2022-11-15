@@ -1,0 +1,21 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 10000;
+    
+    div{
+        margin-inline: auto;
+        padding: $s-pad;
+        @include desk-width;
+        background-color: $default;
+        box-shadow: 0 5px 5px 0 rgba(0 0 0 / 0.1);
+    }
+    
+    h2{
+        color: $dark;
+    }
+}

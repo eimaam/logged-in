@@ -1,0 +1,145 @@
+@import './mixins';
+
+// Defaults
+.flex{
+    @include flex-row;
+    gap: 0.3rem;
+}
+
+.flex-col{
+    @include flex-col;
+    gap: 0.3rem;
+}
+
+// Header sizes
+// font sizes
+
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 3rem;
+    color: $secondary;
+}
+
+h2{
+    font-size: 1.25rem;
+    color: $primary;
+
+    @include mobile{
+        font-size: 1.1rem;
+    }
+}
+
+h3{
+    font-size: 1.15rem;
+}
+
+h4{
+    font-size: 1.01rem;
+}
+
+p{
+    font-size: 1.2rem;
+
+    @include mobile{
+        font-size: 1.1rem;
+    }
+}
+
+// Button & submit input
+button, input[type="submit"]{
+    padding: $s-pad $m-pad; 
+    font-size: 1rem;
+    color: $default;
+    text-transform: capitalize;
+    background-color: $primary;
+    border-radius: $m-border-radius;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $extras;
+        color: $dark;
+    }
+
+    @include mobile{
+        padding: $s-pad;
+        font-size: 0.8rem;
+    }
+}
+
+.btn--secondary{
+    @extend button;
+    background-color: $secondary;
+}
+
+.btn--small{
+    font-size: 0.8rem;
+    padding: 0.3rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    object-fit: cover; /*{ Read thissssssssssssssss} */ 
+    border-radius: $m-border-radius;
+}
+
+ul{
+    list-style-type: none;
+
+    li{
+        font-size: 1rem;
+
+        @include mobile{
+            font-size: 1rem;
+        }
+    }
+}
+
+hr{
+    margin: 2rem auto;
+    color: $primary;
+    border: 1px solid $primary;
+    width: 80%;
+
+    @include mobile{
+        margin-block: 1rem;
+    }
+}
+
+// loading animations
+.loader{
+    width: 100%;
+    margin: auto;
+    @include flex-row;
+}
+// container default
+.container{
+    width: 100%;
+    min-height: 100vh;
+    @include flex-row;
+
+    @include mobile{
+        padding-block: 1.5rem;
+    }
+    
+    // .container--item{
+    //     @include flex-col;
+    //     margin: auto;
+    //     @include desk-width;
+    //     flex-wrap: wrap;
+        
+    //     @include mobile{
+    //         @include m-width;
+    //     }
+
+    //     @include tablet{
+    //         @include tablet-width;
+    //     }
+    // }
+
+}

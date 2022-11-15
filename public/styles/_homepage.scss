@@ -1,0 +1,33 @@
+.homepage{
+    @include desk-width;
+    @include flex-row;
+    align-items: flex-start;
+    padding-block: $l-pad;
+    gap: 1.5rem;
+    margin-top: 3rem;
+
+    aside{
+        width: 30%;
+        @include flex-col;
+        overflow: hidden;
+
+        .nav--card{
+            width: 100%;
+            @include flex-col;
+            gap: 0.5rem;
+            background-color: $bgColor2;
+            padding: $s-pad;
+            border-radius: $m-border-radius;
+
+            button{
+                width: 100%;
+            }
+        }
+    }
+
+    main{
+        width: 70%;
+        border-left: 1px solid $primary;
+        padding-inline: $m-pad;
+    }
+}
