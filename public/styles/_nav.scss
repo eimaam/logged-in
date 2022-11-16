@@ -9,14 +9,15 @@ nav{
     
     div{
         margin-inline: auto;
-        padding: $s-pad;
+        padding: $s-pad 0;
         @include desk-width;
-        background-color: $default;
+        background-color: $bgColor;
         box-shadow: 0 5px 5px 0 rgba(0 0 0 / 0.1);
+        border-bottom: 1px solid $primary;
     }
     
     h2{
-        color: $dark;
+        color: $primary;
     }
 
     // mobile

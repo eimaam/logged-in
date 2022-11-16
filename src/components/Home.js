@@ -6,6 +6,7 @@ import { NavCard } from './NavCard'
 import { SideProfileCard } from './SideProfileCard'
 import dummy from "../assets/error.jpg"
 import { MobileNav } from './MobileNav'
+import { Profile } from './Profile'
 
 export const Home = () => {
   return (

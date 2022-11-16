@@ -14,40 +14,6 @@
         @include mobile{
             display: none;
         }
-
-        .nav--card, ul{
-            width: 100%;
-            @include flex-col;
-            gap: 0.5rem;
-            background-color: $primary;
-            padding: $s-pad;
-            border-radius: $m-border-radius;
-
-            li,a{
-                width: 100%;
-                @include flex-row;
-                justify-content: flex-start;
-                font-size: 1.2rem;
-                padding: $xs-pad;
-                border-radius: $m-border-radius;
-                cursor: pointer;
-                transition: all 300ms;
-
-                .icon{
-                    color: $default;
-                }
-
-                &:hover{
-                    background-color: $default;
-                    color: $primary;
-
-                    .icon{
-                        color: $dark;
-                    }
-                    
-                }
-            }
-        }
     }
 
     main{

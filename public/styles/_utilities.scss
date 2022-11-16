@@ -4,6 +4,7 @@
 .flex{
     @include flex-row;
     gap: 0.5rem;
+    justify-content: flex-start;
 }
 
 .flex-col{
@@ -96,7 +97,7 @@ img{
     max-width: 100%;
     display: block;
     object-fit: cover; /*{ Read thissssssssssssssss} */ 
-    border-radius: $m-border-radius;
+    border-radius: $l-border-radius;
 }
 
 ul{

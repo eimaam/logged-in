@@ -10,6 +10,8 @@
 @import './footer';
 @import './imageModal';
 @import './mobileNav';
+@import './profilePage';
+@import './navCard';
 
 // reset all to 0
 *{
@@ -24,7 +26,7 @@ html, body{
     line-height: 1.3;
     width: 100%;
     height: 100%;
-    color: $dark;
+    color: $default;
     text-align: justify;
     background-color: $bgColor;
     font-family: $spaceGrotesk;

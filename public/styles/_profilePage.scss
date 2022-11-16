@@ -1,0 +1,72 @@
+.profile{
+    @extend .homepage;
+    flex-direction: row-reverse;
+
+    aside{
+        width: 30%;
+    }
+
+    main{
+        width: 70%;
+        // padding-inline: $s-pad;
+        @include flex-col;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        @include mobile{
+            @include mobile-width;
+        }
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        .header, .extra--info, .bio{
+            padding-inline: $s-pad;
+
+            @include mobile{
+                padding: $xs-pad;
+            }
+        }
+        
+        .header{
+            @include flex-row;
+            justify-content: flex-start;
+            width: 100%;
+            
+            img{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: double $primary;
+            }
+        }
+
+        .extra--info{
+            color: $grey;
+            @include flex-row;
+        }
+
+        .view--options{
+            background-color: $primary;
+            width: 100%;
+            @include flex-row;
+            justify-content: space-evenly;
+            padding: $xs-pad;
+
+            h2{
+                color: $dark;
+            }
+        }
+
+        .log--card{
+            width: 100%;
+        }
+
+        hr{
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+}

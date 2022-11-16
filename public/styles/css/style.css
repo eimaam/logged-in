@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  justify-content: flex-start;
 }
 
 .flex-col {
@@ -70,7 +71,7 @@ button, .btn--secondary, input[type=submit] {
   cursor: pointer;
 }
 button:hover, .btn--secondary:hover, input[type=submit]:hover {
-  background-color: #FFF9F5;
+  background-color: rgb(65, 63, 63);
   color: #21312A;
 }
 @media only screen and (max-width: 1000px) {
@@ -100,7 +101,7 @@ img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover; /*{ Read thissssssssssssssss} */
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 ul {
@@ -164,7 +165,7 @@ hr {
   }
 }
 
-.homepage {
+.homepage, .profile {
   width: 60%;
   margin: auto;
   display: flex;
@@ -178,7 +179,7 @@ hr {
   margin-top: 2.5rem;
   position: relative;
 }
-.homepage aside {
+.homepage aside, .profile aside {
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -187,60 +188,24 @@ hr {
   align-items: center;
 }
 @media only screen and (max-width: 1000px) {
-  .homepage aside {
+  .homepage aside, .profile aside {
     display: none;
   }
 }
-.homepage aside .nav--card, .homepage aside ul {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #c58fff;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-.homepage aside .nav--card li, .homepage aside .nav--card a, .homepage aside ul li, .homepage aside ul a {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 300ms;
-}
-.homepage aside .nav--card li .icon, .homepage aside .nav--card a .icon, .homepage aside ul li .icon, .homepage aside ul a .icon {
-  color: rgb(248, 242, 242);
-}
-.homepage aside .nav--card li:hover, .homepage aside .nav--card a:hover, .homepage aside ul li:hover, .homepage aside ul a:hover {
-  background-color: rgb(248, 242, 242);
-  color: #c58fff;
-}
-.homepage aside .nav--card li:hover .icon, .homepage aside .nav--card a:hover .icon, .homepage aside ul li:hover .icon, .homepage aside ul a:hover .icon {
-  color: #21312A;
-}
-.homepage main {
+.homepage main, .profile main {
   width: 70%;
   border-left: 1px solid rgb(248, 242, 242);
   border-right: 1px solid rgb(248, 242, 242);
   overflow-y: scroll;
 }
 @media only screen and (max-width: 1000px) {
-  .homepage main {
+  .homepage main, .profile main {
     width: 100%;
     border: none;
   }
 }
 @media only screen and (max-width: 1000px) {
-  .homepage {
+  .homepage, .profile {
     width: 100%;
     margin: auto;
     padding: 0;
@@ -419,14 +384,15 @@ nav {
 }
 nav div {
   margin-inline: auto;
-  padding: 1rem;
+  padding: 1rem 0;
   width: 60%;
   margin: auto;
-  background-color: rgb(248, 242, 242);
+  background-color: #181818;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #c58fff;
 }
 nav h2 {
-  color: #21312A;
+  color: #c58fff;
 }
 @media only screen and (max-width: 1000px) {
   nav div {
@@ -472,7 +438,7 @@ nav h2 {
 }
 
 footer {
-  background-color: #FFF9F5;
+  background-color: rgb(65, 63, 63);
   padding-block: 2rem;
   padding-bottom: 5rem;
   display: flex;
@@ -517,6 +483,7 @@ footer div * {
   justify-content: flex-start;
   position: absolute;
   width: 50%;
+  height: 100%;
   inset: 0;
   margin: auto;
   margin-top: 3rem;
@@ -564,6 +531,122 @@ footer div * {
   }
 }
 
+.profile {
+  flex-direction: row-reverse;
+}
+.profile aside {
+  width: 30%;
+}
+.profile main {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .profile main {
+    width: 100%;
+    margin: auto;
+  }
+}
+.profile main::-webkit-scrollbar {
+  display: none;
+}
+.profile main .header, .profile main .extra--info, .profile main .bio {
+  padding-inline: 1rem;
+}
+@media only screen and (max-width: 1000px) {
+  .profile main .header, .profile main .extra--info, .profile main .bio {
+    padding: 0.5rem;
+  }
+}
+.profile main .header {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.profile main .header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: double #c58fff;
+}
+.profile main .extra--info {
+  color: rgb(175, 172, 172);
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.profile main .view--options {
+  background-color: #c58fff;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+}
+.profile main .view--options h2 {
+  color: #21312A;
+}
+.profile main .log--card {
+  width: 100%;
+}
+.profile main hr {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav--card, ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #c58fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.nav--card li, .nav--card a, ul li, ul a {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.nav--card li .icon, .nav--card a .icon, ul li .icon, ul a .icon {
+  color: rgb(248, 242, 242);
+}
+.nav--card li:hover, .nav--card a:hover, ul li:hover, ul a:hover {
+  background-color: rgb(248, 242, 242);
+  color: #c58fff;
+}
+.nav--card li:hover .icon, .nav--card a:hover .icon, ul li:hover .icon, ul a:hover .icon {
+  color: #21312A;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -576,7 +659,7 @@ html, body {
   line-height: 1.3;
   width: 100%;
   height: 100%;
-  color: #21312A;
+  color: rgb(248, 242, 242);
   text-align: justify;
   background-color: #181818;
   font-family: "Space Grotesk", "sans-serif";
