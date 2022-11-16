@@ -4,30 +4,51 @@
     align-items: flex-start;
     padding-block: $l-pad;
     gap: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
+    
 
     aside{
         width: 30%;
         @include flex-col;
-        overflow: hidden;
 
-        .nav--card{
+        .nav--card, ul{
             width: 100%;
             @include flex-col;
             gap: 0.5rem;
-            background-color: $bgColor2;
+            background-color: $primary;
             padding: $s-pad;
             border-radius: $m-border-radius;
 
-            button{
+            li,a{
                 width: 100%;
+                @include flex-row;
+                justify-content: flex-start;
+                font-size: 1.2rem;
+                padding: $xs-pad;
+                border-radius: $m-border-radius;
+                cursor: pointer;
+                transition: all 300ms;
+
+                .icon{
+                    color: $default;
+                }
+
+                &:hover{
+                    background-color: $default;
+                    color: $primary;
+
+                    .icon{
+                        color: $dark;
+                    }
+                    
+                }
             }
         }
     }
 
     main{
         width: 70%;
-        border-left: 1px solid $primary;
-        padding-inline: $m-pad;
+        border-left: 1px solid $default;
+        border-right: 1px solid $default;
     }
 }

@@ -13,8 +13,8 @@ export const SideProfileCard = () => {
             <i>Frontend Software Engineer | Crypto Enthusiast | Graphic Designer  </i>
         </div>
         <div className='flex-col'>
-            <button className='btn--small'>Edit Profile</button>
-            <button className='btn--small'>Account Settings</button>
+            <button className='btn--small btn--white'>Edit Profile</button>
+            <button className='btn--small btn--white'>Account Settings</button>
         </div>
     </div>
   )

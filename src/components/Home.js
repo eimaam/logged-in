@@ -1,4 +1,5 @@
 import React from 'react'
+import { Footer } from './Footer'
 import { LogItButton } from './LogItButton'
 import { LogsSection } from './LogsSection'
 import { NavCard } from './NavCard'

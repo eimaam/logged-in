@@ -7,6 +7,7 @@
 @import './logCard';
 @import './nav';
 @import './fixedButton';
+@import './footer';
 
 // reset all to 0
 *{
@@ -23,7 +24,9 @@ html, body{
     height: 100%;
     color: $dark;
     text-align: justify;
-    background-color: $extras;
+    background-color: $bgColor;
+    font-family: $spaceGrotesk;
+    // overflow: hidden;
 
     ::-webkit-scrollbar{
         // display: none;
@@ -64,7 +67,8 @@ textarea{
     padding: 0.8rem 0.5rem;
     border: 1px solid $primary;
     border-radius: 0.3rem;
-    color: $secondary;
+    color: $default;
+    background-color: $bgColor;
     caret-color: $primary;
     resize: none;
     

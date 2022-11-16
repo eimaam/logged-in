@@ -1,14 +1,42 @@
 @import './mixins';
 .logs--section{
-    overflow-y: scroll;
+    overflow: scroll;
+    height: 100vh;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
 
     form{
         // border: 2px solid paleturquoise;
-        // box-shadow: 0 5px 5px 0 rgba(0 0 0 / 0.1);
-        background-color: $bgColor2;
+        // box-shadow: 0 5px 5px 0 rgba(253, 239, 239, 0.1);
+        // background-color: $bgColor2;
+        // border-bottom: 1px solid $secondary;
 
-        button{
-            width: 90%
+        textarea{
+            border: none;
+            border-bottom: 1px solid $primary;
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        div:last-child{
+            @include flex-row;
+            justify-content: space-between;
+            width: 90%;
+
+            .icon{
+                color: $default;
+                font-size: 1.3rem;
+            }
+
+            button{
+                &::first-letter{
+                    transform: rotate(-30deg)
+                }
+            }
         }
     }
 
@@ -19,7 +47,6 @@
         padding: $xs-pad;
         background-color: $primary;
         margin-block: $m-margin;
-        border-radius: $m-border-radius;
 
         h2{
             color: $default;
@@ -27,11 +54,16 @@
         }
     }
 
+    hr{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     .logs{
         hr{
             width: 50%;
             margin: $s-margin auto;
-
         }
     }
 }

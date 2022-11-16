@@ -1,0 +1,15 @@
+footer{
+    background-color: $extras;
+    padding-block: 2rem;
+    margin-top: 5rem;
+    @include flex-col;
+    @include desk-width;
+
+    div{
+        font-size: 2rem;
+
+        *{
+            margin-inline: 1rem;
+        }
+    }
+}

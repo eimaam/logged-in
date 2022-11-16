@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaImage, FaLink } from 'react-icons/fa'
 
 export const LogTextArea = () => {
   return (
@@ -6,11 +7,18 @@ export const LogTextArea = () => {
         <textarea 
         name="" id="" 
         placeholder='...type a log'
-        rows={5}
+        rows={1}
+        maxLength={280}
         />
         {/* <input type="text" placeholder='enter url to embed image'/> */}
         {/* <input type="file" /> */}
-        <button type='submit'>LOG!</button>    
+        <div>
+          <div className='flex' style={{gap: "1rem"}}>
+            <FaImage className='icon' />
+            <FaLink  className='icon'/>
+          </div>
+          <button type='submit'>👻 Log-it </button>    
+        </div>
     </form>
   )
 }
