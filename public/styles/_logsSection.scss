@@ -20,6 +20,10 @@
             &:focus{
                 outline: none;
             }
+
+            @include mobile{
+                border: 1px solid $primary;
+            }
         }
 
         div:last-child{
@@ -30,6 +34,10 @@
             .icon{
                 color: $default;
                 font-size: 1.3rem;
+
+                @include mobile{
+                    font-size: 1rem;
+                }
             }
 
             button{
@@ -47,6 +55,7 @@
         padding: $xs-pad;
         background-color: $primary;
         margin-block: $m-margin;
+        display: none;
 
         h2{
             color: $default;

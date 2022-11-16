@@ -1,0 +1,21 @@
+.mobile--nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 60%;
+    background-color: $primary;
+    font-size: 1.3rem;
+    @include flex-row;
+    justify-content: space-between;
+    padding: $s-pad;
+    margin: auto;
+    margin-bottom: $s-margin;
+    border-radius: $m-border-radius;
+    color: $default;
+    display: none;
+
+    @include mobile{
+        display: flex;
+    }
+}

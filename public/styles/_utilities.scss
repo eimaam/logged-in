@@ -71,7 +71,7 @@ button, input[type="submit"]{
     }
 
     @include mobile{
-        padding: $s-pad;
+        padding: $xs-pad;
         font-size: 0.8rem;
     }
 }
