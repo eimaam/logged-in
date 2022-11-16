@@ -3,7 +3,7 @@ import dummy from "../assets/error.jpg"
 export const LogItButton = () => {
   return (
     <div className='fixed--button'>
-        <img src={dummy} alt="" />
+        <h1>👻</h1>
         <p>Log-</p>
     </div>
   )

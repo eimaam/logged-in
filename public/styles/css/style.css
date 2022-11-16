@@ -31,7 +31,7 @@ h2 {
   font-size: 1.25rem;
   color: #c58fff;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   h2 {
     font-size: 1.1rem;
   }
@@ -39,6 +39,11 @@ h2 {
 
 h3 {
   font-size: 1.15rem;
+}
+@media only screen and (max-width: 1000px) {
+  h3 {
+    font-size: 0.9rem;
+  }
 }
 
 h4 {
@@ -49,7 +54,7 @@ p {
   font-size: 1rem;
   font-weight: lighter;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   p {
     font-size: 0.9rem;
   }
@@ -68,7 +73,7 @@ button:hover, .btn--secondary:hover, input[type=submit]:hover {
   background-color: #FFF9F5;
   color: #21312A;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   button, .btn--secondary, input[type=submit] {
     padding: 1rem;
     font-size: 0.8rem;
@@ -82,6 +87,7 @@ button:hover, .btn--secondary:hover, input[type=submit]:hover {
 .btn--small {
   font-size: 0.8rem;
   padding: 0.3rem;
+  font-weight: bold;
 }
 
 .btn--white {
@@ -103,7 +109,7 @@ ul {
 ul li {
   font-size: 1rem;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   ul li {
     font-size: 1rem;
   }
@@ -115,10 +121,22 @@ hr {
   border: 1px solid #c58fff;
   width: 80%;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   hr {
     margin-block: 1rem;
   }
+}
+
+.error {
+  color: red;
+}
+
+.error--background {
+  background-color: red;
+}
+
+.success {
+  color: #c58fff;
 }
 
 .loader {
@@ -140,7 +158,7 @@ hr {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   .container {
     padding-block: 1.5rem;
   }
@@ -158,6 +176,7 @@ hr {
   padding-block: 2rem;
   gap: 1.5rem;
   margin-top: 2.5rem;
+  position: relative;
 }
 .homepage aside {
   width: 30%;
@@ -166,6 +185,13 @@ hr {
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
+  max-height: 100vh;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1000px) {
+  .homepage aside {
+    display: none;
+  }
 }
 .homepage aside .nav--card, .homepage aside ul {
   width: 100%;
@@ -207,6 +233,22 @@ hr {
   width: 70%;
   border-left: 1px solid rgb(248, 242, 242);
   border-right: 1px solid rgb(248, 242, 242);
+}
+@media only screen and (max-width: 1000px) {
+  .homepage main {
+    width: 100%;
+    border: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .homepage {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+    margin: auto;
+    margin-top: 4rem;
+  }
 }
 
 .profile--card {
@@ -300,6 +342,11 @@ hr {
   padding: 1rem;
   transition: all 300ms;
 }
+@media only screen and (max-width: 1000px) {
+  .log--card {
+    width: 100%;
+  }
+}
 .log--card * {
   color: rgb(248, 242, 242);
 }
@@ -328,6 +375,11 @@ hr {
   width: 100%;
   max-height: 300px;
 }
+@media only screen and (max-width: 1000px) {
+  .log--card .log--section img {
+    max-height: 200px;
+  }
+}
 .log--card div:nth-child(3) {
   width: 100%;
   display: flex;
@@ -339,6 +391,11 @@ hr {
 .log--card div:nth-child(3) * {
   color: rgb(248, 242, 242);
   font-size: 1rem;
+}
+@media only screen and (max-width: 1000px) {
+  .log--card div:nth-child(3) * {
+    font-size: 0.85rem;
+  }
 }
 
 nav {
@@ -361,30 +418,53 @@ nav div {
 nav h2 {
   color: #21312A;
 }
+@media only screen and (max-width: 1000px) {
+  nav div {
+    width: 100%;
+  }
+}
 
 .fixed--button {
+  position: absolute;
+  bottom: 14%;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
   gap: 0;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 1rem;
-  border: solid red;
-}
-.fixed--button img {
-  width: 50px;
-  height: 50px;
+  background-color: #c58fff;
   border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 0.5rem;
+  margin-inline: 0.5rem;
+}
+.fixed--button:hover {
+  background-color: #21312A;
+}
+.fixed--button:hover p {
+  color: rgb(248, 242, 242);
+}
+.fixed--button p {
+  color: #21312A;
+}
+@media only screen and (max-width: 1000px) {
+  .fixed--button {
+    bottom: 10%;
+    width: 50px;
+    height: 50px;
+  }
+  .fixed--button p {
+    display: none;
+  }
 }
 
 footer {
   background-color: #FFF9F5;
   padding-block: 2rem;
-  margin-top: 5rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -393,11 +473,56 @@ footer {
   width: 60%;
   margin: auto;
 }
+footer h1 {
+  color: #c58fff;
+}
 footer div {
   font-size: 2rem;
 }
 footer div * {
-  margin-inline: 1rem;
+  margin-inline: 0.5rem;
+}
+@media only screen and (max-width: 1000px) {
+  footer div {
+    font-size: 1.5rem;
+  }
+  footer div * {
+    margin-inline: 0.5rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  footer {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 1rem;
+  }
+}
+
+.image--modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  inset: 0;
+  margin: auto;
+  margin-top: 3rem;
+  background-color: #e5e9fc;
+  padding: 3rem;
+}
+@media only screen and (max-width: 1000px) {
+  .image--modal {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    inset: none;
+  }
+  .image--modal img {
+    min-width: 100%;
+    height: 100%;
+  }
 }
 
 * {
@@ -441,9 +566,9 @@ form {
   text-align: center;
   border-radius: 0.5rem;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   form {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -466,7 +591,7 @@ select:hover,
 textarea:hover {
   border: 1px solid #c58fff;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1000px) {
   input,
 select,
 textarea {

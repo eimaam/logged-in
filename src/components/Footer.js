@@ -12,6 +12,7 @@ export const Footer = () => {
             <FaSnapchat />
             <CgMail />
         </div>
+        <p>All rights reserved. <br /> Logged Inc. &copy; 2022</p>
     </footer>
   )
 }

@@ -36,6 +36,10 @@ h2{
 
 h3{
     font-size: 1.15rem;
+
+    @include mobile{
+        font-size: 0.9rem;
+    }
 }
 
 h4{
@@ -80,6 +84,7 @@ button, input[type="submit"]{
 .btn--small{
     font-size: 0.8rem;
     padding: 0.3rem;
+    font-weight: bold;
 }
 
 .btn--white{
@@ -115,6 +120,18 @@ hr{
     @include mobile{
         margin-block: 1rem;
     }
+}
+
+.error{
+    color: red;
+}
+
+.error--background{
+    background-color: red;
+}
+
+.success{
+    color: $primary;
 }
 
 // loading animations

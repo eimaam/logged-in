@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import dummy from "../assets/eimaam.png"
 import { FaHeart, FaRegHeart, FaShare, FaShareAlt } from "react-icons/fa"
+import { ImageModal } from './ImageModal'
 
 export const LogCard = ({
     avatar,
@@ -15,6 +16,7 @@ export const LogCard = ({
     const [noOfLikes, setNoOfLikes] = useState(likes)
 
     const [liked, setLiked] = useState(false)
+    const [showModal, setShowModal] = useState(false)
 
     const handleLiked = (val) => {
         setLiked(prevData => !prevData)
@@ -43,9 +45,9 @@ export const LogCard = ({
             <p>
                 {log}
             </p>
-            {image && <img src={image} alt="" />}
+            {image && <img src={image} alt="" onClick={() => setShowModal(prev => !prev)}/>}
         </div>
-        <div onClick={() => handleLiked(LikesNum)}>
+        <div onClick={() => handleLiked(LikesNum)} className="options">
             {/* <p><FaHeart /></p> */}
             {liked 
             ? <p><FaHeart /> {likes}</p> 
@@ -53,6 +55,7 @@ export const LogCard = ({
             }
             <p><FaShareAlt /></p>
         </div>
+        {showModal && <ImageModal image={image} handleClick={() => setShowModal(false)}/>}
     </div>
   )
 }

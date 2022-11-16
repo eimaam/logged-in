@@ -5,11 +5,17 @@
     padding-block: $l-pad;
     gap: 1.5rem;
     margin-top: 2.5rem;
-    
+    position: relative;
 
     aside{
         width: 30%;
         @include flex-col;
+        max-height: 100vh;
+        overflow: hidden;
+
+        @include mobile{
+            display: none;
+        }
 
         .nav--card, ul{
             width: 100%;
@@ -50,5 +56,21 @@
         width: 70%;
         border-left: 1px solid $default;
         border-right: 1px solid $default;
+
+        @include mobile{
+            width: 100%;
+            border: none;
+        }
+    }
+
+
+
+    // mobile
+    @include mobile{
+        @include mobile-width;
+        padding: 0;
+        margin: 0;
+        margin: auto;
+        margin-top: 4rem;
     }
 }

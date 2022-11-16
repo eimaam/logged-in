@@ -18,4 +18,11 @@ nav{
     h2{
         color: $dark;
     }
+
+    // mobile
+    @include mobile{
+        div{
+            width: 100%;
+        }
+    }
 }

@@ -1,0 +1,24 @@
+.image--modal{
+    @include flex-col;
+    position: absolute;
+    width: 50%;
+    inset: 0;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: $bgColor2;
+    padding: 3rem;
+
+    
+
+    @include mobile{
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+        inset: none;
+
+        img{
+            min-width: 100%;
+            height: 100%;
+        }
+    }
+}

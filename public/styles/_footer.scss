@@ -1,15 +1,34 @@
 footer{
     background-color: $extras;
     padding-block: 2rem;
-    margin-top: 5rem;
+    padding-bottom: 5rem;
     @include flex-col;
     @include desk-width;
 
+    h1{
+        color: $primary;
+    }
+    
     div{
         font-size: 2rem;
 
         *{
-            margin-inline: 1rem;
+            margin-inline: $s-margin;
         }
+
+        @include mobile{
+            font-size: 1.5rem;
+
+            *{
+                margin-inline: $s-margin;
+            }
+        }
+    }
+
+
+    // mobile
+    @include mobile{
+        @include mobile-width;
+        padding-bottom: 1rem;
     }
 }

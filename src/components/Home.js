@@ -4,6 +4,7 @@ import { LogItButton } from './LogItButton'
 import { LogsSection } from './LogsSection'
 import { NavCard } from './NavCard'
 import { SideProfileCard } from './SideProfileCard'
+import dummy from "../assets/error.jpg"
 
 export const Home = () => {
   return (

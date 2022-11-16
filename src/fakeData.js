@@ -6,19 +6,19 @@ import dummy from "../src/assets/dummy.webp"
 
 export const logs = [
     {
-        avatar: avatar2,
+        avatar: avatar1,
         fullName: "Abdullah Humeid",
         username: "abdullah_humeid",
         verified: true,
         log: "The World is not your home! Know that and know peace!",
-        likes: 2000000000,
+        likes: 2000,
     },
     {
-        avatar: avatar1,
+        avatar: avatar2,
         fullName: "Imam Dahir Dan-Azumi",
         username: "eimaam",
         verified: true,
-        log: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aut quod asperiores labore fugiat at itaque deleniti quaerat minus dolorum laboriosam iure consequatur, blanditiis nisi vel? Velit, officiis voluptates quasi aperiam quaerat facere tempore repudiandae, exercitationem excepturi, beatae reprehenderit.",
+        log: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aut quod asperiores labore fugiat at itaque deleniti quaerat minus dolorum laboriosam iure consequatur, blanditiis nisi vel? Velit, officiis voluptates quasi #webdevelopment #softwareengineering #frontenddevelopment",
         image: avatar2,
         likes: 999,
     },

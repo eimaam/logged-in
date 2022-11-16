@@ -8,6 +8,7 @@
 @import './nav';
 @import './fixedButton';
 @import './footer';
+@import './imageModal';
 
 // reset all to 0
 *{
@@ -54,7 +55,7 @@ form{
     border-radius: $m-border-radius;
 
     @include mobile{
-        width: 90%;
+        width: 100%;
     }
 }
 

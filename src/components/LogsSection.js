@@ -3,6 +3,7 @@ import { LogTextArea } from './LogTextArea'
 import { LogCard } from "./LogCard"
 import { logs } from '../fakeData'
 import { Footer } from './Footer'
+import { LogItButton } from './LogItButton'
 
 export const LogsSection = () => {
   return (
