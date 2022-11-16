@@ -185,8 +185,6 @@ hr {
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
-  overflow: hidden;
 }
 @media only screen and (max-width: 1000px) {
   .homepage aside {
@@ -233,6 +231,7 @@ hr {
   width: 70%;
   border-left: 1px solid rgb(248, 242, 242);
   border-right: 1px solid rgb(248, 242, 242);
+  overflow-y: scroll;
 }
 @media only screen and (max-width: 1000px) {
   .homepage main {

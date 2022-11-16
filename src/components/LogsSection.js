@@ -14,7 +14,39 @@ export const LogsSection = () => {
             <h2>LOGS</h2>
             <h2>MEDIAs</h2>
         </div>
-        <div className='logs'>
+        <div className='logs' data-aos="fade">
+          {logs.map((item, index) => {
+            return <>
+                    <LogCard 
+                    key={index}
+                    avatar={item.avatar}
+                    fullName={item.fullName}
+                    username={item.username}
+                    log={item.log}
+                    image={item.image}
+                    verified={item.verified}
+                    likes={item.likes}
+                    likesNum={item.likes}
+                    />
+                    <hr />
+                  </>
+          })}
+          {logs.map((item, index) => {
+            return <>
+                    <LogCard 
+                    key={index}
+                    avatar={item.avatar}
+                    fullName={item.fullName}
+                    username={item.username}
+                    log={item.log}
+                    image={item.image}
+                    verified={item.verified}
+                    likes={item.likes}
+                    likesNum={item.likes}
+                    />
+                    <hr />
+                  </>
+          })}
           {logs.map((item, index) => {
             return <>
                     <LogCard 

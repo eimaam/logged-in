@@ -10,8 +10,6 @@
     aside{
         width: 30%;
         @include flex-col;
-        max-height: 100vh;
-        overflow: hidden;
 
         @include mobile{
             display: none;
@@ -56,6 +54,7 @@
         width: 70%;
         border-left: 1px solid $default;
         border-right: 1px solid $default;
+        overflow-y: scroll;
 
         @include mobile{
             width: 100%;

@@ -17,7 +17,7 @@ export const LogTextArea = () => {
             <FaImage className='icon' />
             <FaLink  className='icon'/>
           </div>
-          <button type='submit'>👻 Log-it </button>    
+          <button type='submit'>👻 Log~it </button>    
         </div>
     </form>
   )

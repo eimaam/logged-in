@@ -12,11 +12,11 @@ export const Home = () => {
     <div className='homepage'>
       <LogItButton />
       <MobileNav />
-      <aside>
+      <aside data-aos="fade-left">
         <SideProfileCard />
         <NavCard />
       </aside>
-      <main>
+      <main data-aos="fade-up">
         <LogsSection />
       </main>
     </div>
