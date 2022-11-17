@@ -19,14 +19,17 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <Nav />
-      <Profile />
-      {/* <Footer /> */}
-      <ToastContainer
-      autoClose={3000}
-      />
-    </div>
+    <>
+    <Nav />
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/profile' element={<Profile />} />
+    </Routes>
+    {/* <Footer /> */}
+    <ToastContainer
+    autoClose={3000}
+    />
+    </>
   );
 }
 

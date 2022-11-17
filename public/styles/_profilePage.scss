@@ -12,9 +12,10 @@
         @include flex-col;
         align-items: flex-start;
         gap: 0.5rem;
-
+        
         @include mobile{
             @include mobile-width;
+            gap: 0;
         }
 
         &::-webkit-scrollbar{
@@ -39,6 +40,11 @@
                 height: 150px;
                 border-radius: 50%;
                 border: double $primary;
+
+                @include mobile{
+                    width: 90px;
+                    height: 90px;
+                }
             }
         }
 

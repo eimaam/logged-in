@@ -1,7 +1,7 @@
 .log--card{
     width: 80%;
     margin: auto;
-    background-color: rgb(65, 63, 63);
+    background-color: $extras;
     border-radius: $m-border-radius;
     @include flex-col;
     align-items: flex-start;
@@ -10,6 +10,7 @@
 
     @include mobile{
         width: 100%;
+        background-color: $bgColor;
     }
 
     // &:hover{
@@ -30,6 +31,12 @@
             border-radius: 50%;
         }
 
+        .badge{
+            width: 20px;
+            height: 20px;
+            border-radius: none !important;
+        }
+
     }
 
     .log--section{
@@ -39,6 +46,7 @@
         img{
             width: 100%;
             max-height: 300px;
+            border-radius: $l-border-radius;
 
             @include mobile{
                 max-height: 200px;

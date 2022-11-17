@@ -34,7 +34,9 @@ export const Profile = () => {
             </p>
         </div>
         <div className='bio'>
-            <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Sint dolores excepturi illum expedita suscipit nobis modi velit atque ea voluptatem magnam earum exercitationem veritatis architecto harum quibusdam, nemo, dolorem sapiente!</p>
+            <p>Software Engineer - React - Javascript | Typescript  | Crypto Enthusiast/Trader |
+                "If your Dreams & Aspirations don't scare you, trust me they ain't big enough"
+            </p>
         </div>
         <hr />
         <div className='view--options'>

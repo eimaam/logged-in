@@ -1,12 +1,18 @@
 import React from 'react'
-import { FaGhost } from 'react-icons/fa'
+import logo from "../assets/logged-logo-white.png"
+
 
 export const Nav = () => {
   return (
     <nav>
+      <div className='nav--container'>
         <div>
-            <h2>👻 Logged~</h2>
+          <img src={logo} alt="" />
         </div>
+        <div>
+            <h2> Logged~</h2>
+        </div>
+      </div>
     </nav>
   )
 }

@@ -7,13 +7,27 @@ nav{
     margin: 0;
     z-index: 10000;
     
-    div{
+    .nav--container{
         margin-inline: auto;
         padding: $s-pad 0;
         @include desk-width;
         background-color: $bgColor;
         box-shadow: 0 5px 5px 0 rgba(0 0 0 / 0.1);
         border-bottom: 1px solid $primary;
+        @include flex-row;
+        justify-content: flex-start;
+        gap: 0.5rem;
+
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: none !important;
+
+            @include mobile{
+                width: 25px;
+                height: 25px;
+            }
+        }
     }
     
     h2{
@@ -22,8 +36,9 @@ nav{
 
     // mobile
     @include mobile{
-        div{
+        .nav--container{
             width: 100%;
+            padding: $s-pad;
         }
     }
 }

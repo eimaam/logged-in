@@ -3,6 +3,8 @@ import dummy from "../assets/eimaam.png"
 import { FaHeart, FaRegHeart, FaShare, FaShareAlt } from "react-icons/fa"
 import { ImageModal } from './ImageModal'
 
+import badge from "../assets/logged-logo-white.png"
+
 export const LogCard = ({
     avatar,
     fullName,
@@ -36,9 +38,14 @@ export const LogCard = ({
     <div className='log--card'>
         <div className='title'>
             <img src={avatar} alt="" />
-            <div>
-                <h3>{fullName} {verified && "👻"} </h3>
-                <i>{`@${username}`}</i>
+            <div >
+                <div className='flex'>
+                    <h3>{fullName} </h3>
+                    <i><img src={badge} alt="" className='badge'/></i>
+                </div>
+                <div>
+                    <i>{`@${username}`}</i>
+                </div>
             </div>
         </div>
         <div className='log--section'>

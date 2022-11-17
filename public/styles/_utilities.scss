@@ -31,7 +31,7 @@ h2{
     color: $primary;
 
     @include mobile{
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 }
 
@@ -97,7 +97,6 @@ img{
     max-width: 100%;
     display: block;
     object-fit: cover; /*{ Read thissssssssssssssss} */ 
-    border-radius: $l-border-radius;
 }
 
 ul{

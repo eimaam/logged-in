@@ -1,9 +1,10 @@
 import React from 'react'
-import dummy from "../assets/error.jpg"
+import logo from "../assets/logged-logo-white.png"
+
 export const LogItButton = () => {
   return (
     <div className='fixed--button'>
-        <h1>👻</h1>
+        <img src={logo} /> 
         <p>Log-</p>
     </div>
   )
